@@ -3,6 +3,17 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Colors of categories */
+  --categorie1: rgba(86, 37, 143, 0.6);
+  --categorie2: rgba(62,66,130,0.6);
+  --categorie3: rgba(91,190,189,0.6);
+  --categorie4: rgba(125,197,108,0.6);
+  --categorie5: rgba(214,223,69,0.6);
+  --categorie6: rgba(239,170,76,0.6);
+  --categorie7: rgba(226,70,54,0.6);
+  --categorie8: rgba(167,38,74,0.6);
+  --categorie9: rgba(136,34,110,0.6);
+  --categorienoticia: #A29F9F;
 }
 
 @theme inline {
