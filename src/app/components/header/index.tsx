@@ -1,14 +1,19 @@
-//  Componente Header
+// Componente Header
 import Link from "next/link";
 
-export function Header(){
-    return(
-        <header className="flex bg-black text-white align-center justify-center px-2 py-4">
-
-            <div className="align-center justify-center flex">
-                <img className="w-12" src="../img/logo.png" alt="Logo-SBT" />
-            </div>
-          
-        </header>
-    )
+export function Header() {
+  return (
+    <header className="flex items-center bg-black text-white px-4 py-4 md:px-8 justify-center">
+      <div className="flex items-center ">
+        {/* Direcionando para a tela inicial */}
+        <Link href="/">
+          <img
+            className="w-10 sm:w-12 md:w-14 lg:w-16"
+            src="/img/logo.png" 
+            alt="Logo-SBT"
+          />
+        </Link>
+      </div>
+    </header>
+  );
 }

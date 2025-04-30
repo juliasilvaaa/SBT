@@ -16,16 +16,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-       <body className={`antialised`}>
+    <html lang="pt-br">
+      <body className={`antialised`}>
+        <Header />
+        <div className="pt-4">
+          <Categories />
+        </div>
 
-        <Header/>
-        <Categories/>
-
-      {/* Conteúdos */}
+        {/* Conteúdos */}
         {children}
 
-    
+
       </body>
     </html>
   );
