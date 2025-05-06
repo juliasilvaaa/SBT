@@ -28,6 +28,16 @@ export default function InfoProgram({ params }: ProgramInterface) {
                     <hr className="border-t-1 border-[var(--liveoff)] pt-2 w-[80vh]" />
                     <h1 className="pt-6 w-[520px]">{program.description}</h1>
 
+                    <div className="pt-10">
+                        <h1 className="text-[var(--fontcolor)]">Apresentador</h1>
+                    <Image className="w-[120px] h-[110px] rounded-full"
+                    quality={100}
+                    height={110}
+                    width={120}
+                    src={program.apresentadorimg}
+                    alt={`Programa ${program.apresentador}`}
+                />
+                    </div>
                 </div>
 
 

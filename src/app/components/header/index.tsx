@@ -4,7 +4,7 @@ import Link from "next/link";
 export function Header() {
   return (
     <header className="flex items-center bg-black text-white px-4 py-4 md:px-8 justify-center">
-      <div className="flex items-center ">
+      <div className="">
         {/* Direcionando para a tela inicial */}
         <Link href="/">
           <img

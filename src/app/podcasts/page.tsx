@@ -9,7 +9,7 @@ export default function PodCasts() {
     <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center pt-10 max-w-6xl mx-auto">
       {data.map((podcast) => (
         // Key - Como se fosse um identificador do map
-        <a href={'/podcasts/' + podcast.slug} key={podcast.title}>
+        <a className="hover:scale-105 transition-transform" href={'/podcasts/' + podcast.slug} key={podcast.title}>
           <div className="relative">
             <Image
             width={280}

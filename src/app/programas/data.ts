@@ -15,10 +15,23 @@ import bro99 from '../../../public/img/programas/bro99.png'
 import cinema from '../../../public/img/programas/cinema.png'
 import teladesucessos from '../../../public/img/programas/teladesucessos.png'
 
+// Jornal e Noticias
+import primeiroimpacto from '../../../public/img/programas/primeiroimpacto.png'
+
 
 // Realites
 import esquadrao from '../../../public/img/programas/moda.png'
 import bakeoff from '../../../public/img/programas/bakeoff.png'
+
+
+// Apresentadores 
+import patricia from '../../../public/img/apresentadores/patricia.png'
+import ratinhoapresentador from '../../../public/img/apresentadores/ratinho.png'
+import danilo from '../../../public/img/apresentadores/danilo.png'
+import virginia from '../../../public/img/apresentadores/virginia.png'
+import celso from '../../../public/img/apresentadores/celso.png'
+import { scheduler } from "timers/promises";
+import dynamic from "next/dynamic";
 
 
 export const PROGRAMAS_DATA = [
@@ -27,94 +40,198 @@ export const PROGRAMAS_DATA = [
         slug: 'domingo-legal',
         title: 'Domingo Legal',
         image: domingolegal,
-        description: '',
-        categorie: 'Programa de Auditório'
+        description: 'Domingo Legal já faz parte da vida dos brasileiros! Há 30 anos, a atração leva até a casa do telespectador um programa especial com música, reportagens, celebridades, notícias e quadros que são campeões de audiência.A história do Domingo Legal começou em 17 de janeiro de 1993, quando ainda era gravado. Foi a partir do 1º domingo de agosto de 1994 que passou a ser apresentado ao vivo. Desde 1998, a atração é exibida diretamente do CDT da Anhanguera, sede do SBT, em Osasco.',
+        categorie: 'Programa de Auditório',
+        apresentador: 'Patricia Abravanel',
+        apresentadorimg: celso,
+        schedule: [
+            {
+                day: 'domingo',
+                time: '11:15'
+            }
+        ]
     },
     {
         slug: 'patricia',
         title: 'Programa Silvio Santos com Patricia Abravanel',
         image: silviosantos,
-        description: '',
-        categorie: 'Programa de Auditório'
+        description: 'As noites de domingo são muito mais alegres com o Programa Silvio Santos em várias horas de diversão garantida, games, convidados famosos, brincadeiras com o auditório, além de boas gargalhadas Patricia Abravanel interage com o público de uma forma bem descontraída. A ideia é que a plateia participe da atração e possa ganhar uma série de prêmios.Em 2021, Patricia Abravanel começou a apresentar o dominical junto ao pai. Seja com jogos, musicais, entrevistas, gincanas ou formatos, Patricia Abravanel comanda o programa do lugar onde mais gosta de estar: ao lado de seu auditório, com suas colegas de trabalho, que são parte fundamental do programa.',
+        categorie: 'Programa de Auditório',
+        apresentador: 'Patricia Abravanel',
+        apresentadorimg: patricia,
+        schedule: [
+            {
+                day: 'domingo',
+                time: '19:00'
+            }
+        ]
     },
     {
         slug: 'ratinho',
         title: 'Ratinho',
         image: ratinho,
-        description: '',
-        categorie: 'Programa de Auditório'
+        description: 'O Programa do Ratinho traz ao público o melhor de Carlos Massa. Sempre de bom humor, Ratinho volta a fazer a alegria do telespectador em um programa dinâmico, animado e cheio de atrações que só são vistas aqui. No ar de segunda a sexta, o programa mistura games, comédia, participação do público e quadros únicos, como o Jornal Rational, Gol Show, Dez Ou Mil, Boteco Do Ratinho, entre outros. A atração recebe ainda convidados famosos, que vão ao palco se divertir com o apresentador.Sempre com o forte lado humorístico, Ratinho conta com o fiel companheiro Xaropinho, além de sua banda no estúdio, Murilo Bordoni, Faxinildo, Santos, Rhenata Schmidt e Milene Pavorô.',
+        categorie: 'Programa de Auditório',
+        apresentador: 'Ratinho',
+        apresentadorimg: ratinhoapresentador
     },
     {
         slug: 'the-noite',
         title: 'The Noite com Danilo Gentili',
         image: thenoite,
-        description: '',
-        categorie: 'Programa de Auditório'
+        description: 'O The Noite Com Danilo Gentili traz muitos entrevistados interessantes e altos índices de piadas por minuto, abordando os fatos mais (e menos) relevantes do dia. A atração também conta com Igor Guimarães, além do irreverente locutor Diguinho Coruja. A trilha sonora fica por conta da banda Ultraje a Rigor.',
+        categorie: 'Programa de Auditório',
+        apresentador: 'Danilo Gentili',
+        apresentadorimg: danilo
     },
     {
         slug: 'sabadou',
         title: 'Sabadou com Virgina',
         image: sabadou,
-        description: '',
-        categorie: 'Programa de Auditório'
+        description: 'O Sabadou com Virginia é um programa de entretenimento que combina entrevistas, muita interação e brincadeiras com a plateia, proporcionando um final de noite mais leve e cheio de diversão. No ar aos sábados, a partir das 22h15 [de Brasília], a atração traz a maior influencer do Brasil comandando seu primeiro programa de televisão. Virginia recebe semanalmente convidados das mais diversas áreas para um encontro repleto de games, musicais, boas histórias e muita interação com a plateia e o público de casa.Margareth Serrão, mãe de Virginia, e Lucas Guedez, o best friend da influencer, também participam do programa sem economizar na leveza e no bom humor. Marga, com o seu jeito despojado e autêntico, não vai poupar opiniões sobre tudo que acontece no programa. Já Lucas, com seu bom humor, será o elo entre convidados, plateia e a apresentadora, participando ainda de quadros e games no palco, bem como Margareth.Altamente engajada nas redes sociais e com milhões de seguidores acompanhando seu dia a dia, Virginia chega ao SBT para entreter e divertir toda a família.',
+        categorie: 'Programa de Auditório',
+        apresentador: 'Patricia Abravanel',
+        apresentadorimg: virginia
     },
     {
         slug: 'roda-roda',
         title: 'Roda Roda',
         image: rodaroda,
         description: '',
-        categorie: 'Programa de Auditório'
+        categorie: 'Programa de Auditório',
+        apresentador: 'Patricia Abravanel',
+        apresentadorimg: patricia
+    },
+    {
+        slug: 'primeiro-impacto',
+        title: 'Primeiro Impacto',
+        image: primeiroimpacto,
+        description: '',
+        categorie: 'Jornal',
+        apresentador: 'Patricia Abravanel',
+        apresentadorimg: patricia,
+        schedule: [
+            {
+                day: 'segunda',
+                time: '07:30'
+            },
+            {
+                day: 'segunda',
+                time: '11:00'
+            }
+        ]
     },
     // Categorie - Filmes, Series e Desenhos
+    {
+        slug: 'chaves',
+        title: 'Chaves',
+        image: sabadoanimado,
+        description: '',
+        categorie: 'Desenhos',
+        apresentador: 'Patricia Abravanel',
+        apresentadorimg: patricia,
+        schedule: [
+            {
+                day: 'segunda',
+                time: '13:00'
+            }
+        ]
+    },
     {
         slug: 'sabado-animado',
         title: 'Sabado Animado',
         image: sabadoanimado,
         description: '',
-        categorie: 'Desenhos'
+        categorie: 'Desenhos',
+        apresentador: 'Patricia Abravanel',
+        apresentadorimg: patricia
     },
     {
         slug: 'cine-espetacular',
         title: 'Cine Espetacular',
         image: cineespetacular,
         description: '',
-        categorie: 'Desenhos'
+        categorie: 'Desenhos',
+        apresentador: 'Patricia Abravanel',
+        apresentadorimg: patricia
     },
     {
         slug: 'cinema',
         title: 'Cinema',
         image: cinema,
         description: '',
-        categorie: 'Desenhos'
+        categorie: 'Desenhos',
+        apresentador: 'Patricia Abravanel',
+        apresentadorimg: patricia
     },
     {
         slug: 'bro99',
         title: 'BRO 99',
         image: bro99,
         description: '',
-        categorie: 'Desenhos'
+        categorie: 'Desenhos',
+        apresentador: 'Patricia Abravanel',
+        apresentadorimg: patricia
     },
     {
         slug: 'teladesucessos',
         title: 'Tela de Sucessos',
         image: teladesucessos,
         description: '',
-        categorie: 'Desenhos'
+        categorie: 'Desenhos',
+        apresentador: 'Patricia Abravanel',
+        apresentadorimg: patricia
     },
+
     // Categorie - Realites
     {
         slug: 'esquadrao',
         title: 'Esquadrão da Moda',
         image: esquadrao,
-        description: '',
-        categorie: 'Realites'
+        description: 'Dudu Bertholini e Renata Kuerten apresentam o Esquadrão da Moda e dão dicas essenciais para ensinar como a participante do dia pode usar a moda a seu favor. Eles contam ainda com os especialistas Rodrigo Cintra e Fabi Gomes para transformar a convidada',
+        categorie: 'Realites',
+        apresentador: 'Patricia Abravanel',
+        apresentadorimg: patricia
     },
     {
         slug: 'bakeoff',
         title: 'Bake Off',
         image: bakeoff,
-        description: '',
-        categorie: 'Realites'
+        description: 'O Bake Off Brasil é uma disputa entre confeiteiros amadores, apresentada por Nadja Haddad. Os participantes são submetidos a provas técnicas e criativas e precisam colocar a mão na massa para enfrentar a nossa dupla de jurados especializados, Beca Milano e Giuseppe Gerundino.',
+        categorie: 'Realites',
+        apresentador: 'Patricia Abravanel',
+        apresentadorimg: patricia
     },
+    // Categorie - Novelas
+    {
+        slug: 'quando-me-apaixono',
+        title: 'Quando me Apaixono',
+        image: bakeoff,
+        description: 'O Bake Off Brasil é uma disputa entre confeiteiros amadores, apresentada por Nadja Haddad. Os participantes são submetidos a provas técnicas e criativas e precisam colocar a mão na massa para enfrentar a nossa dupla de jurados especializados, Beca Milano e Giuseppe Gerundino.',
+        categorie: 'Novelas',
+        apresentador: 'Patricia Abravanel',
+        apresentadorimg: patricia,
+        schedule: [
+            {
+                day: 'segunda',
+                time: '13:45'
+            }
+        ]
+    },
+    {
+        slug: 'a-usurpadora',
+        title: 'A usurpadora',
+        image: bakeoff,
+        description: 'O Bake Off Brasil é uma disputa entre confeiteiros amadores, apresentada por Nadja Haddad. Os participantes são submetidos a provas técnicas e criativas e precisam colocar a mão na massa para enfrentar a nossa dupla de jurados especializados, Beca Milano e Giuseppe Gerundino.',
+        categorie: 'Novelas',
+        apresentador: 'Patricia Abravanel',
+        apresentadorimg: patricia,
+        schedule: [
+            {
+                day: 'segunda',
+                time: '14:30'
+            }
+        ]
+    }
 
 ]
