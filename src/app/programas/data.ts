@@ -30,6 +30,12 @@ import ratinhoapresentador from '../../../public/img/apresentadores/ratinho.png'
 import danilo from '../../../public/img/apresentadores/danilo.png'
 import virginia from '../../../public/img/apresentadores/virginia.png'
 import celso from '../../../public/img/apresentadores/celso.png'
+import marcaodopovo from '../../../public/img/apresentadores/marcaodopovo.png'
+import rebeca from '../../../public/img/apresentadores/rebeca.png'
+import silvia from '../../../public/img/apresentadores/silviabravanel.png'
+import renata from '../../../public/img/apresentadores/renata.png'
+import dudu from  '../../../public/img/apresentadores/dudu.png'
+
 import { scheduler } from "timers/promises";
 import dynamic from "next/dynamic";
 
@@ -42,12 +48,16 @@ export const PROGRAMAS_DATA = [
         image: domingolegal,
         description: 'Domingo Legal já faz parte da vida dos brasileiros! Há 30 anos, a atração leva até a casa do telespectador um programa especial com música, reportagens, celebridades, notícias e quadros que são campeões de audiência.A história do Domingo Legal começou em 17 de janeiro de 1993, quando ainda era gravado. Foi a partir do 1º domingo de agosto de 1994 que passou a ser apresentado ao vivo. Desde 1998, a atração é exibida diretamente do CDT da Anhanguera, sede do SBT, em Osasco.',
         categorie: 'Programa de Auditório',
-        apresentador: 'Patricia Abravanel',
-        apresentadorimg: celso,
+        apresentadores: [
+            {
+                name: 'Celso Portioli',
+                image: celso
+            }
+        ],
         schedule: [
             {
                 day: 'domingo',
-                time: '11:15'
+                time: '19:00'
             }
         ]
     },
@@ -57,8 +67,12 @@ export const PROGRAMAS_DATA = [
         image: silviosantos,
         description: 'As noites de domingo são muito mais alegres com o Programa Silvio Santos em várias horas de diversão garantida, games, convidados famosos, brincadeiras com o auditório, além de boas gargalhadas Patricia Abravanel interage com o público de uma forma bem descontraída. A ideia é que a plateia participe da atração e possa ganhar uma série de prêmios.Em 2021, Patricia Abravanel começou a apresentar o dominical junto ao pai. Seja com jogos, musicais, entrevistas, gincanas ou formatos, Patricia Abravanel comanda o programa do lugar onde mais gosta de estar: ao lado de seu auditório, com suas colegas de trabalho, que são parte fundamental do programa.',
         categorie: 'Programa de Auditório',
-        apresentador: 'Patricia Abravanel',
-        apresentadorimg: patricia,
+        apresentadores: [
+            {
+                name: 'Patricia Abravanel',
+                image: patricia
+            }
+        ],
         schedule: [
             {
                 day: 'domingo',
@@ -72,8 +86,18 @@ export const PROGRAMAS_DATA = [
         image: ratinho,
         description: 'O Programa do Ratinho traz ao público o melhor de Carlos Massa. Sempre de bom humor, Ratinho volta a fazer a alegria do telespectador em um programa dinâmico, animado e cheio de atrações que só são vistas aqui. No ar de segunda a sexta, o programa mistura games, comédia, participação do público e quadros únicos, como o Jornal Rational, Gol Show, Dez Ou Mil, Boteco Do Ratinho, entre outros. A atração recebe ainda convidados famosos, que vão ao palco se divertir com o apresentador.Sempre com o forte lado humorístico, Ratinho conta com o fiel companheiro Xaropinho, além de sua banda no estúdio, Murilo Bordoni, Faxinildo, Santos, Rhenata Schmidt e Milene Pavorô.',
         categorie: 'Programa de Auditório',
-        apresentador: 'Ratinho',
-        apresentadorimg: ratinhoapresentador
+        apresentadores: [
+            {
+                name: 'Ratinho',
+                image: ratinhoapresentador
+            }
+        ],
+        schedule: [
+            {
+                day: 'domingo',
+                time: '19:00'
+            }
+        ]
     },
     {
         slug: 'the-noite',
@@ -81,8 +105,18 @@ export const PROGRAMAS_DATA = [
         image: thenoite,
         description: 'O The Noite Com Danilo Gentili traz muitos entrevistados interessantes e altos índices de piadas por minuto, abordando os fatos mais (e menos) relevantes do dia. A atração também conta com Igor Guimarães, além do irreverente locutor Diguinho Coruja. A trilha sonora fica por conta da banda Ultraje a Rigor.',
         categorie: 'Programa de Auditório',
-        apresentador: 'Danilo Gentili',
-        apresentadorimg: danilo
+        apresentadores: [
+            {
+                name: 'Danilo Gentili',
+                image: danilo
+            }
+        ],
+        schedule: [
+            {
+                day: 'domingo',
+                time: '19:00'
+            }
+        ]
     },
     {
         slug: 'sabadou',
@@ -90,17 +124,37 @@ export const PROGRAMAS_DATA = [
         image: sabadou,
         description: 'O Sabadou com Virginia é um programa de entretenimento que combina entrevistas, muita interação e brincadeiras com a plateia, proporcionando um final de noite mais leve e cheio de diversão. No ar aos sábados, a partir das 22h15 [de Brasília], a atração traz a maior influencer do Brasil comandando seu primeiro programa de televisão. Virginia recebe semanalmente convidados das mais diversas áreas para um encontro repleto de games, musicais, boas histórias e muita interação com a plateia e o público de casa.Margareth Serrão, mãe de Virginia, e Lucas Guedez, o best friend da influencer, também participam do programa sem economizar na leveza e no bom humor. Marga, com o seu jeito despojado e autêntico, não vai poupar opiniões sobre tudo que acontece no programa. Já Lucas, com seu bom humor, será o elo entre convidados, plateia e a apresentadora, participando ainda de quadros e games no palco, bem como Margareth.Altamente engajada nas redes sociais e com milhões de seguidores acompanhando seu dia a dia, Virginia chega ao SBT para entreter e divertir toda a família.',
         categorie: 'Programa de Auditório',
-        apresentador: 'Patricia Abravanel',
-        apresentadorimg: virginia
+        apresentadores: [
+            {
+                name: 'Virginia',
+                image: virginia
+            }
+        ],
+        schedule: [
+            {
+                day: 'domingo',
+                time: '19:00'
+            }
+        ]
     },
     {
         slug: 'roda-roda',
         title: 'Roda Roda',
         image: rodaroda,
-        description: '',
+        description: 'O Programa mais querido entre Consultores e Clientes Jequiti! Rebeca Abravanel está no comando do Roda a Roda, este programa tradicional, único, onde a diversão é garantida. Aos domingos, não perca esta atração emocionante.Para participar precisa ser consultora, Líder ou Gerente de Vendas Jequiti e ser classificadas por ranking de vendas.Sendo classificado, o participante vem a São Paulo com todas as despesas pagas, para participar do programa.Seja um Consultor Jequiti e mude de vida!',
         categorie: 'Programa de Auditório',
-        apresentador: 'Patricia Abravanel',
-        apresentadorimg: patricia
+        apresentadores: [
+            {
+                name: 'Rebeca Abravanel',
+                image: rebeca
+            }
+        ],
+        schedule: [
+            {
+                day: 'domingo',
+                time: '19:00'
+            }
+        ]
     },
     {
         slug: 'primeiro-impacto',
@@ -108,16 +162,16 @@ export const PROGRAMAS_DATA = [
         image: primeiroimpacto,
         description: '',
         categorie: 'Jornal',
-        apresentador: 'Patricia Abravanel',
-        apresentadorimg: patricia,
+        apresentadores: [
+            {
+                name: 'Marcão do Povo',
+                image: marcaodopovo
+            }
+        ],
         schedule: [
             {
-                day: 'segunda',
-                time: '07:30'
-            },
-            {
-                day: 'segunda',
-                time: '11:00'
+                day: 'domingo',
+                time: '19:00'
             }
         ]
     },
@@ -126,14 +180,18 @@ export const PROGRAMAS_DATA = [
         slug: 'chaves',
         title: 'Chaves',
         image: sabadoanimado,
-        description: '',
+        description: 'Seu fim de semana começa com muito mais alegria e diversão no Sábado Animado! Os desenhos animados que fazem sucesso entre a garotada de todas as idades estão reunidos aqui.',
         categorie: 'Desenhos',
-        apresentador: 'Patricia Abravanel',
-        apresentadorimg: patricia,
+        apresentadores: [
+            {
+                name: 'Renata Kuerten',
+                image: renata
+            }
+        ],
         schedule: [
             {
-                day: 'segunda',
-                time: '13:00'
+                day: 'domingo',
+                time: '19:00'
             }
         ]
     },
@@ -143,8 +201,22 @@ export const PROGRAMAS_DATA = [
         image: sabadoanimado,
         description: '',
         categorie: 'Desenhos',
-        apresentador: 'Patricia Abravanel',
-        apresentadorimg: patricia
+        apresentadores: [
+            {
+                name: 'Renata Kuerten',
+                image: renata
+            },
+            {
+                name: 'Dudu Bertholini',
+                image: dudu
+            }
+        ],
+        schedule: [
+            {
+                day: 'domingo',
+                time: '19:00'
+            }
+        ]
     },
     {
         slug: 'cine-espetacular',
@@ -152,8 +224,22 @@ export const PROGRAMAS_DATA = [
         image: cineespetacular,
         description: '',
         categorie: 'Desenhos',
-        apresentador: 'Patricia Abravanel',
-        apresentadorimg: patricia
+        apresentadores: [
+            {
+                name: 'Renata Kuerten',
+                image: renata
+            },
+            {
+                name: 'Dudu Bertholini',
+                image: dudu
+            }
+        ],
+        schedule: [
+            {
+                day: 'domingo',
+                time: '19:00'
+            }
+        ]
     },
     {
         slug: 'cinema',
@@ -161,8 +247,22 @@ export const PROGRAMAS_DATA = [
         image: cinema,
         description: '',
         categorie: 'Desenhos',
-        apresentador: 'Patricia Abravanel',
-        apresentadorimg: patricia
+        apresentadores: [
+            {
+                name: 'Renata Kuerten',
+                image: renata
+            },
+            {
+                name: 'Dudu Bertholini',
+                image: dudu
+            }
+        ],
+        schedule: [
+            {
+                day: 'domingo',
+                time: '19:00'
+            }
+        ]
     },
     {
         slug: 'bro99',
@@ -170,8 +270,22 @@ export const PROGRAMAS_DATA = [
         image: bro99,
         description: '',
         categorie: 'Desenhos',
-        apresentador: 'Patricia Abravanel',
-        apresentadorimg: patricia
+        apresentadores: [
+            {
+                name: 'Renata Kuerten',
+                image: renata
+            },
+            {
+                name: 'Dudu Bertholini',
+                image: dudu
+            }
+        ],
+        schedule: [
+            {
+                day: 'domingo',
+                time: '19:00'
+            }
+        ]
     },
     {
         slug: 'teladesucessos',
@@ -179,10 +293,23 @@ export const PROGRAMAS_DATA = [
         image: teladesucessos,
         description: '',
         categorie: 'Desenhos',
-        apresentador: 'Patricia Abravanel',
-        apresentadorimg: patricia
+        apresentadores: [
+            {
+                name: 'Renata Kuerten',
+                image: renata
+            },
+            {
+                name: 'Dudu Bertholini',
+                image: dudu
+            }
+        ],
+        schedule: [
+            {
+                day: 'domingo',
+                time: '19:00'
+            }
+        ]
     },
-
     // Categorie - Realites
     {
         slug: 'esquadrao',
@@ -190,8 +317,22 @@ export const PROGRAMAS_DATA = [
         image: esquadrao,
         description: 'Dudu Bertholini e Renata Kuerten apresentam o Esquadrão da Moda e dão dicas essenciais para ensinar como a participante do dia pode usar a moda a seu favor. Eles contam ainda com os especialistas Rodrigo Cintra e Fabi Gomes para transformar a convidada',
         categorie: 'Realites',
-        apresentador: 'Patricia Abravanel',
-        apresentadorimg: patricia
+        apresentadores: [
+            {
+                name: 'Renata Kuerten',
+                image: renata
+            },
+            {
+                name: 'Dudu Bertholini',
+                image: dudu
+            }
+        ],
+        schedule: [
+            {
+                day: 'domingo',
+                time: '19:00'
+            }
+        ]
     },
     {
         slug: 'bakeoff',
@@ -199,8 +340,22 @@ export const PROGRAMAS_DATA = [
         image: bakeoff,
         description: 'O Bake Off Brasil é uma disputa entre confeiteiros amadores, apresentada por Nadja Haddad. Os participantes são submetidos a provas técnicas e criativas e precisam colocar a mão na massa para enfrentar a nossa dupla de jurados especializados, Beca Milano e Giuseppe Gerundino.',
         categorie: 'Realites',
-        apresentador: 'Patricia Abravanel',
-        apresentadorimg: patricia
+        apresentadores: [
+            {
+                name: 'Renata Kuerten',
+                image: renata
+            },
+            {
+                name: 'Dudu Bertholini',
+                image: dudu
+            }
+        ],
+        schedule: [
+            {
+                day: 'domingo',
+                time: '19:00'
+            }
+        ]
     },
     // Categorie - Novelas
     {
@@ -209,12 +364,20 @@ export const PROGRAMAS_DATA = [
         image: bakeoff,
         description: 'O Bake Off Brasil é uma disputa entre confeiteiros amadores, apresentada por Nadja Haddad. Os participantes são submetidos a provas técnicas e criativas e precisam colocar a mão na massa para enfrentar a nossa dupla de jurados especializados, Beca Milano e Giuseppe Gerundino.',
         categorie: 'Novelas',
-        apresentador: 'Patricia Abravanel',
-        apresentadorimg: patricia,
+        apresentadores: [
+            {
+                name: 'Renata Kuerten',
+                image: renata
+            },
+            {
+                name: 'Dudu Bertholini',
+                image: dudu
+            }
+        ],
         schedule: [
             {
-                day: 'segunda',
-                time: '13:45'
+                day: 'domingo',
+                time: '19:00'
             }
         ]
     },
@@ -224,12 +387,20 @@ export const PROGRAMAS_DATA = [
         image: bakeoff,
         description: 'O Bake Off Brasil é uma disputa entre confeiteiros amadores, apresentada por Nadja Haddad. Os participantes são submetidos a provas técnicas e criativas e precisam colocar a mão na massa para enfrentar a nossa dupla de jurados especializados, Beca Milano e Giuseppe Gerundino.',
         categorie: 'Novelas',
-        apresentador: 'Patricia Abravanel',
-        apresentadorimg: patricia,
+        apresentadores: [
+            {
+                name: 'Renata Kuerten',
+                image: renata
+            },
+            {
+                name: 'Dudu Bertholini',
+                image: dudu
+            }
+        ],
         schedule: [
             {
-                day: 'segunda',
-                time: '14:30'
+                day: 'domingo',
+                time: '19:00'
             }
         ]
     }
