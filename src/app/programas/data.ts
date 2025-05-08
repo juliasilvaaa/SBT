@@ -36,6 +36,12 @@ import silvia from '../../../public/img/apresentadores/silviabravanel.png'
 import renata from '../../../public/img/apresentadores/renata.png'
 import dudu from  '../../../public/img/apresentadores/dudu.png'
 
+// Inscricoes
+import quemarrisca from '../../../public/img/programas/quemarrisca.png'
+import talentoinfantil from '../../../public/img/programas/talentoinfantil.png'
+
+
+
 import { scheduler } from "timers/promises";
 import dynamic from "next/dynamic";
 
@@ -48,6 +54,22 @@ export const PROGRAMAS_DATA = [
         image: domingolegal,
         description: 'Domingo Legal já faz parte da vida dos brasileiros! Há 30 anos, a atração leva até a casa do telespectador um programa especial com música, reportagens, celebridades, notícias e quadros que são campeões de audiência.A história do Domingo Legal começou em 17 de janeiro de 1993, quando ainda era gravado. Foi a partir do 1º domingo de agosto de 1994 que passou a ser apresentado ao vivo. Desde 1998, a atração é exibida diretamente do CDT da Anhanguera, sede do SBT, em Osasco.',
         categorie: 'Programa de Auditório',
+        inscricoes: [
+            {
+                slug: 'comprar-e-bom-levar-e-melhor',
+                type: 'Quadro',
+                title: 'Comprar é bom, levar é melhor!',
+                description: 'Já imaginou como seria entrar numa loja e poder comprar tudo o que quiser? O Domingo Legal quer desafiar você e sua família ou amigos a participar de um jogo em que vocês podem realizar seus sonhos de consumo e conquistar tudo o que desejam. Mas para isso, vocês precisarão responder corretamente as perguntas do nosso apresentador. Gostou da ideia? Então inscreva-se!',
+                image: domingolegal
+            },
+            {
+                slug: 'quem-arrisca-ganha-mais',
+                type: 'Quadro',
+                title: 'Quem Arrisca Ganha Mais',
+                description: 'O Domingo Legal está lançando um game que pode dar até 100 mil reais em produtos. Duas duplas irão se enfrentar em busca dessa bolada. Quer realizar todos os seus sonhos de consumo? Gosta de arriscar e manda bem em provas que envolvem habilidades, rapidez e corrida contra o tempo? Então, esse é o seu lugar! Inscreva-se no "Quem Arrisca Ganha Mais" e venha encarar seus adversários.',
+                image: quemarrisca
+            }
+        ],
         apresentadores: [
             {
                 name: 'Celso Portioli',
@@ -59,7 +81,7 @@ export const PROGRAMAS_DATA = [
                 day: 'domingo',
                 time: '19:00'
             }
-        ]
+        ],
     },
     {
         slug: 'patricia',
@@ -67,6 +89,21 @@ export const PROGRAMAS_DATA = [
         image: silviosantos,
         description: 'As noites de domingo são muito mais alegres com o Programa Silvio Santos em várias horas de diversão garantida, games, convidados famosos, brincadeiras com o auditório, além de boas gargalhadas Patricia Abravanel interage com o público de uma forma bem descontraída. A ideia é que a plateia participe da atração e possa ganhar uma série de prêmios.Em 2021, Patricia Abravanel começou a apresentar o dominical junto ao pai. Seja com jogos, musicais, entrevistas, gincanas ou formatos, Patricia Abravanel comanda o programa do lugar onde mais gosta de estar: ao lado de seu auditório, com suas colegas de trabalho, que são parte fundamental do programa.',
         categorie: 'Programa de Auditório',
+        inscricoes: [
+            {
+                slug: 'show-do-milhao',
+                type: 'Quadro',
+                title: 'Show do Milhão',
+                description: 'Se você é bom de conhecimentos gerais, inscreva-se para participar do novo "Show do Milhão" e concorrer ao tão sonhado prêmio de 1 milhão de reais!',
+                image: silviosantos
+            },
+            {
+                slug: 'talento-infantil',
+                type: 'Auditório',
+                title: 'Talento Infantil',
+                image: talentoinfantil
+            }
+        ],
         apresentadores: [
             {
                 name: 'Patricia Abravanel',

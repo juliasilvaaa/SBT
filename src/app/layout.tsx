@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "./components/header";
 import { Categories } from "./components/categories";
-
+import { Footer } from "./components/footer";
 
 
 export const metadata: Metadata = {
@@ -25,10 +25,15 @@ export default function RootLayout({
         <div className="pt-4">
           <Categories />
         </div>
+        <div className="flex flex-col">
+          <main>
+          {/* Conteúdos */}
+          {children}
+        </main>
 
-        {/* Conteúdos */}
-        {children}
-
+        <Footer />
+        </div>
+        
 
       </body>
     </html>
