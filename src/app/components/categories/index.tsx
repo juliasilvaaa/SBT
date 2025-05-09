@@ -27,7 +27,9 @@ export function Categories(){
                 </div>
 
                 <div className="cursor-pointer hover:bg-black  bg-[var(--categorie4)] rounded-xl font-bold text-white flex align-center justify-center w-30">
+                   <Link href='/noticias'>
                     <h1>Notícias</h1>
+                    </Link>
                 </div>
 
                 <div className="cursor-pointer hover:bg-black  bg-[var(--categorie5)] rounded-xl font-bold text-white flex align-center justify-center w-30">

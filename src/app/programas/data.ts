@@ -1,5 +1,6 @@
 import { title } from "process";
 
+
 // Import das imagens
 import domingolegal from '../../../public/img/programas/domingo.png'
 import silviosantos from '../../../public/img/programas/patriciaprograma.png'
@@ -7,6 +8,8 @@ import ratinho from '../../../public/img/programas/ratinho.png'
 import thenoite from '../../../public/img/programas/thenoite.png'
 import sabadou from '../../../public/img/programas/sabadou.png'
 import rodaroda from '../../../public/img/programas/rodaroda.png'
+import rodajequiti from '../../../public/img/programas/rodarodajequiti.png'
+import fofocalizando from '../../../public/img/programas/fofocalizando.png'
 
 // Desenhos
 import sabadoanimado from '../../../public/img/programas/sabadoanimado.png'
@@ -14,10 +17,19 @@ import cineespetacular from '../../../public/img/programas/cineespetacular.png'
 import bro99 from '../../../public/img/programas/bro99.png'
 import cinema from '../../../public/img/programas/cinema.png'
 import teladesucessos from '../../../public/img/programas/teladesucessos.png'
+import chaves from '../../../public/img/programas/chaves.png'
+import chapolin from '../../../public/img/programas/chapolin.png'
 
 // Jornal e Noticias
 import primeiroimpacto from '../../../public/img/programas/primeiroimpacto.png'
+import sbtnews from '../../../public/img/programas/sbtnews.png'
+import sbtbrasil from '../../../public/img/programas/sbtbrasil.png'
 
+
+// Novelas
+import quandomeapaixono from '../../../public/img/programas/quandomeapaixono.png'
+import usurpadora from '../../../public/img/programas/usurpadora.png'
+import cavernaencantada from '../../../public/img/programas/cavernaencantada.png'
 
 // Realites
 import esquadrao from '../../../public/img/programas/moda.png'
@@ -34,16 +46,12 @@ import marcaodopovo from '../../../public/img/apresentadores/marcaodopovo.png'
 import rebeca from '../../../public/img/apresentadores/rebeca.png'
 import silvia from '../../../public/img/apresentadores/silviabravanel.png'
 import renata from '../../../public/img/apresentadores/renata.png'
-import dudu from  '../../../public/img/apresentadores/dudu.png'
+import dudu from '../../../public/img/apresentadores/dudu.png'
 
 // Inscricoes
 import quemarrisca from '../../../public/img/programas/quemarrisca.png'
 import talentoinfantil from '../../../public/img/programas/talentoinfantil.png'
 
-
-
-import { scheduler } from "timers/promises";
-import dynamic from "next/dynamic";
 
 
 export const PROGRAMAS_DATA = [
@@ -79,7 +87,7 @@ export const PROGRAMAS_DATA = [
         schedule: [
             {
                 day: 'domingo',
-                time: '19:00'
+                time: '11:15'
             }
         ],
     },
@@ -131,8 +139,46 @@ export const PROGRAMAS_DATA = [
         ],
         schedule: [
             {
-                day: 'domingo',
-                time: '19:00'
+                day: 'segunda',
+                time: '22:20'
+            }
+        ]
+    },
+    {
+        slug: 'fofocalizando',
+        title: 'Fofocalizando',
+        image: fofocalizando,
+        description: 'O Programa do Ratinho traz ao público o melhor de Carlos Massa. Sempre de bom humor, Ratinho volta a fazer a alegria do telespectador em um programa dinâmico, animado e cheio de atrações que só são vistas aqui. No ar de segunda a sexta, o programa mistura games, comédia, participação do público e quadros únicos, como o Jornal Rational, Gol Show, Dez Ou Mil, Boteco Do Ratinho, entre outros. A atração recebe ainda convidados famosos, que vão ao palco se divertir com o apresentador.Sempre com o forte lado humorístico, Ratinho conta com o fiel companheiro Xaropinho, além de sua banda no estúdio, Murilo Bordoni, Faxinildo, Santos, Rhenata Schmidt e Milene Pavorô.',
+        categorie: 'Programa de Auditório',
+        apresentadores: [
+            {
+                name: 'Ratinho',
+                image: ratinhoapresentador
+            }
+        ],
+        schedule: [
+            {
+                day: 'segunda',
+                time: '15:30'
+            }
+        ]
+    },
+     {
+        slug: 'sbt-brasil',
+        title: 'SBT Brasil',
+        image: sbtbrasil,
+        description: 'O Programa do Ratinho traz ao público o melhor de Carlos Massa. Sempre de bom humor, Ratinho volta a fazer a alegria do telespectador em um programa dinâmico, animado e cheio de atrações que só são vistas aqui. No ar de segunda a sexta, o programa mistura games, comédia, participação do público e quadros únicos, como o Jornal Rational, Gol Show, Dez Ou Mil, Boteco Do Ratinho, entre outros. A atração recebe ainda convidados famosos, que vão ao palco se divertir com o apresentador.Sempre com o forte lado humorístico, Ratinho conta com o fiel companheiro Xaropinho, além de sua banda no estúdio, Murilo Bordoni, Faxinildo, Santos, Rhenata Schmidt e Milene Pavorô.',
+        categorie: 'Programa de Auditório',
+        apresentadores: [
+            {
+                name: 'Ratinho',
+                image: ratinhoapresentador
+            }
+        ],
+        schedule: [
+            {
+                day: 'segunda',
+                time: '19:45'
             }
         ]
     },
@@ -150,8 +196,8 @@ export const PROGRAMAS_DATA = [
         ],
         schedule: [
             {
-                day: 'domingo',
-                time: '19:00'
+                day: 'segunda',
+                time: '23:30'
             }
         ]
     },
@@ -175,6 +221,25 @@ export const PROGRAMAS_DATA = [
         ]
     },
     {
+        slug: 'roda-roda-jequiti',
+        title: 'Roda Roda Jequiti',
+        image: rodajequiti,
+        description: '',
+        categorie: 'Programa de Auditório',
+        apresentadores: [
+            {
+                name: 'Virginia',
+                image: virginia
+            }
+        ],
+        schedule: [
+            {
+                day: 'domingo',
+                time: '18:15'
+            }
+        ]
+    },
+    {
         slug: 'roda-roda',
         title: 'Roda Roda',
         image: rodaroda,
@@ -194,6 +259,29 @@ export const PROGRAMAS_DATA = [
         ]
     },
     {
+        slug: 'sbt-news',
+        title: 'SBT NEWS',
+        image: sbtnews,
+        description: 'O Programa mais querido entre Consultores e Clientes Jequiti! Rebeca Abravanel está no comando do Roda a Roda, este programa tradicional, único, onde a diversão é garantida. Aos domingos, não perca esta atração emocionante.Para participar precisa ser consultora, Líder ou Gerente de Vendas Jequiti e ser classificadas por ranking de vendas.Sendo classificado, o participante vem a São Paulo com todas as despesas pagas, para participar do programa.Seja um Consultor Jequiti e mude de vida!',
+        categorie: 'Jornal',
+        apresentadores: [
+            {
+                name: 'Rebeca Abravanel',
+                image: rebeca
+            }
+        ],
+        schedule: [
+            {
+                day: 'segunda',
+                time: '01:00'
+            },
+            {
+                day: 'segunda',
+                time: '04:45'
+            }
+        ]
+    },
+    {
         slug: 'primeiro-impacto',
         title: 'Primeiro Impacto',
         image: primeiroimpacto,
@@ -207,8 +295,44 @@ export const PROGRAMAS_DATA = [
         ],
         schedule: [
             {
-                day: 'domingo',
-                time: '19:00'
+                day: 'segunda',
+                time: '07:30'
+            },
+            {
+                day: 'segunda',
+                time: '11:00'
+            },
+            {
+                day: 'terca',
+                time: '07:30'
+            },
+            {
+                day: 'terca',
+                time: '11:00'
+            },
+            {
+                day: 'quarta',
+                time: '07:30'
+            },
+            {
+                day: 'quarta',
+                time: '11:00'
+            },
+            {
+                day: 'quinta',
+                time: '07:30'
+            },
+            {
+                day: 'quinta',
+                time: '11:00'
+            },
+            {
+                day: 'sexta',
+                time: '07:30'
+            },
+            {
+                day: 'sexta',
+                time: '11:00'
             }
         ]
     },
@@ -216,7 +340,7 @@ export const PROGRAMAS_DATA = [
     {
         slug: 'chaves',
         title: 'Chaves',
-        image: sabadoanimado,
+        image: chaves,
         description: 'Seu fim de semana começa com muito mais alegria e diversão no Sábado Animado! Os desenhos animados que fazem sucesso entre a garotada de todas as idades estão reunidos aqui.',
         categorie: 'Desenhos',
         apresentadores: [
@@ -227,8 +351,28 @@ export const PROGRAMAS_DATA = [
         ],
         schedule: [
             {
-                day: 'domingo',
-                time: '19:00'
+                day: 'segunda',
+                time: '13:00'
+            },
+            {
+                day: 'segunda',
+                time: '20:45'
+            },
+            {
+                day: 'terca',
+                time: '13:00'
+            },
+            {
+                day: 'quarta',
+                time: '13:00'
+            },
+            {
+                day: 'quinta',
+                time: '13:00'
+            }, ,
+            {
+                day: 'sexta',
+                time: '13:00'
             }
         ]
     },
@@ -250,8 +394,54 @@ export const PROGRAMAS_DATA = [
         ],
         schedule: [
             {
-                day: 'domingo',
-                time: '19:00'
+                day: 'sabado',
+                time: '06:45'
+            }
+        ]
+    },
+    {
+        slug: 'chapolin',
+        title: 'Chapolin',
+        image: chapolin,
+        description: '',
+        categorie: 'Desenhos',
+        apresentadores: [
+            {
+                name: 'Renata Kuerten',
+                image: renata
+            },
+            {
+                name: 'Dudu Bertholini',
+                image: dudu
+            }
+        ],
+        schedule: [
+            {
+                day: 'segunda',
+                time: '22:00'
+            }
+        ]
+    },
+    {
+        slug: 'caverna-encantada',
+        title: 'Caverna Encantada',
+        image: cavernaencantada,
+        description: '',
+        categorie: 'Desenhos',
+        apresentadores: [
+            {
+                name: 'Renata Kuerten',
+                image: renata
+            },
+            {
+                name: 'Dudu Bertholini',
+                image: dudu
+            }
+        ],
+        schedule: [
+            {
+                day: 'segunda',
+                time: '21:05'
             }
         ]
     },
@@ -296,8 +486,12 @@ export const PROGRAMAS_DATA = [
         ],
         schedule: [
             {
-                day: 'domingo',
-                time: '19:00'
+                day: 'sabado',
+                time: '14:00'
+            },
+            {
+                day: 'sabado',
+                time: '16:45'
             }
         ]
     },
@@ -398,7 +592,7 @@ export const PROGRAMAS_DATA = [
     {
         slug: 'quando-me-apaixono',
         title: 'Quando me Apaixono',
-        image: bakeoff,
+        image: quandomeapaixono,
         description: 'O Bake Off Brasil é uma disputa entre confeiteiros amadores, apresentada por Nadja Haddad. Os participantes são submetidos a provas técnicas e criativas e precisam colocar a mão na massa para enfrentar a nossa dupla de jurados especializados, Beca Milano e Giuseppe Gerundino.',
         categorie: 'Novelas',
         apresentadores: [
@@ -413,15 +607,31 @@ export const PROGRAMAS_DATA = [
         ],
         schedule: [
             {
-                day: 'domingo',
-                time: '19:00'
+                day: 'segunda',
+                time: '13:45'
+            },
+            {
+                day: 'terca',
+                time: '13:45'
+            },
+            {
+                day: 'quarta',
+                time: '13:45'
+            },
+            {
+                day: 'quinta',
+                time: '13:45'
+            },
+            {
+                day: 'sexta',
+                time: '13:45'
             }
         ]
     },
     {
         slug: 'a-usurpadora',
         title: 'A usurpadora',
-        image: bakeoff,
+        image: usurpadora,
         description: 'O Bake Off Brasil é uma disputa entre confeiteiros amadores, apresentada por Nadja Haddad. Os participantes são submetidos a provas técnicas e criativas e precisam colocar a mão na massa para enfrentar a nossa dupla de jurados especializados, Beca Milano e Giuseppe Gerundino.',
         categorie: 'Novelas',
         apresentadores: [
@@ -436,8 +646,24 @@ export const PROGRAMAS_DATA = [
         ],
         schedule: [
             {
-                day: 'domingo',
-                time: '19:00'
+                day: 'segunda',
+                time: '14:30'
+            },
+            {
+                day: 'terca',
+                time: '14:15'
+            },
+            {
+                day: 'quarta',
+                time: '14:30'
+            },
+            {
+                day: 'quinta',
+                time: '14:30'
+            },
+            {
+                day: 'sexta',
+                time: '14:30'
             }
         ]
     }

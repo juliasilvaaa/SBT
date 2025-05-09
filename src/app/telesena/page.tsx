@@ -1,5 +1,8 @@
 export default function TeleSena(){
     return(
-        <img className="w-full" src="../img/telesena/telesena.png" alt="" />
+        <div>
+                    <img className="w-full" src="../img/telesena/telesena1.png" alt="" />
+
+        </div>
     )
 }
